@@ -57,7 +57,10 @@ function remove_page(e){
 function get_pages(){
   const pages = [];
   document.getElementsByName('page').forEach(page => {
-    pages.push(page.value);
+    // Do not save empty pages
+    if(page.value && page.value.replace(/\s/g, '') !== ''){
+      pages.push(page.value);
+    }
   });
   return pages;
 }
