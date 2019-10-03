@@ -38,7 +38,7 @@ function add_page(value){
   const pagesDiv = document.getElementById('pages');
   const wrapper = document.createElement("span");
   const input = document.createElement("input");
-  input.type = "text";
+  input.type = "url";
   input.name = "page";
   input.value = value;
   wrapper.appendChild(input);
