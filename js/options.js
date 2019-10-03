@@ -1,10 +1,13 @@
 const DEFAULT_PAGES = ["https://www.google.com"];
+const DEFAULT_RANDOM = true;
 
 // Saves options to chrome.storage.
 function save_options() {
   const pages = get_pages();
+  const isRandom = document.getElementById('random').checked;
   chrome.storage.sync.set({
     pages: pages,
+    random: isRandom
   }, function() {
     // Update status to let user know options were saved.
     const status = document.getElementById('status');
@@ -18,10 +21,12 @@ function save_options() {
 // Restores the options state using the preferences stored in chrome.storage.
 function restore_options() {
   chrome.storage.sync.get({
-    pages: DEFAULT_PAGES
+    pages: DEFAULT_PAGES,
+    random: DEFAULT_RANDOM
   }, function(items) {
     clean_pages();
     set_pages(items.pages);
+    document.getElementById('random').checked = items.random;
   });
 }
 
