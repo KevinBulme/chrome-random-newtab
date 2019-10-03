@@ -1,3 +1,5 @@
+const DEFAULT_PAGES = ["https://www.google.com"];
+
 // Saves options to chrome.storage.
 function save_options() {
   const page = document.getElementById('pages').value;
@@ -18,7 +20,7 @@ function save_options() {
 // Restores the options state using the preferences stored in chrome.storage.
 function restore_options() {
   chrome.storage.sync.get({
-    pages: ["https://www.google.com"]
+    pages: DEFAULT_PAGES
   }, function(items) {
     document.getElementById('pages').value = items.pages[0];
   });
