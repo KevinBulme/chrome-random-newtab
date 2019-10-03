@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head><title>Random NewTab Options</title></head>
-<body>
+  <head>
+    <title>Random NewTab Options</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
 
-Pages : 
-<div id="pages">
-  <span><input name="page" type="url"><button name="removePage">X</button></span>
-</div>
-<button id="addPage">Add</button>
+    <div class="container">
+      <div>
+        <div class="field">
+          <label>Random order</label>
+          <input type="checkbox" id="random">
+        </div>
+        <div class="field">
+          <label>Pages</label>
+          <div id="pages">
+            <span><input name="page" type="url"><button name="removePage">X</button></span>
+          </div>
+        </div>
+      </div>
+      <button id="addPage">+</button>
+      <div class="submit">
+        <div id="status"></div>
+        <button id="save">Save</button>
+      </div>
+    </div>
 
-<label>
-  <input type="checkbox" id="random">
-  Random order
-</label>
-
-<div id="status"></div>
-<button id="save">Save</button>
-
-<script src="js/options.js"></script>
-</body>
+    <script src="js/options.js"></script>
+  </body>
 </html>
