@@ -28,7 +28,8 @@ By doing this, Chrome will set an address in the address bar. Extensions don't h
 
 ## How do I modify the options?
 
-There is an interface for modifying the URLs, and to randomize the order . You can also modify the defaults URLs from the js code, in that case make sure URLs are always wrapped in double quotes (`""`) and all but the last URL is followed by a comma.
+- There is an interface for modifying the URLs, and to randomize the order .
+- You can also modify the defaults URLs from the js code, in that case make sure URLs are always wrapped in double quotes (`""`) and all but the last URL is followed by a comma.
 
 # License
 
