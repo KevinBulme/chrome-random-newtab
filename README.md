@@ -2,17 +2,19 @@
 
 A new tab override page extension for Google Chrome.
 
-I'm releasing this on GitHub only. Maybe some developer will want to release it to the Web Store.
+Forked from [jimschubert/chrome-random-newtab](https://github.com/jimschubert/chrome-random-newtab).
+
+
+## Local Testing
 
 You can install this extension with the following steps:
 
-1. Click on `Releases` on GitHub  
-2. Download version `v1.0` and unzip to some directory on your computer  
-3. navigate to `chrome://extensions/`  
-4. check `Developer mode`  
-5. Click `Load Unpacked Extension...`  
-6. Select the directory from step 2  
-7. Uncheck `Developer mode`
+1. Clone the project `git clone https://github.com/KevinBulme/chrome-random-newtab.git` or downlad the zip from GitHub UI
+2. navigate to `chrome://extensions/`  
+3. check `Developer mode`  
+4. Click `Load Unpacked Extension...`  
+5. Select the directory from step 1
+6. Uncheck `Developer mode`
 
 ## Can you highlight or remove the url from the address bar?
 
@@ -24,13 +26,9 @@ chrome.tabs.update({ url: "chrome://apps", highlighted: true });
 
 By doing this, Chrome will set an address in the address bar. Extensions don't have permissions to highlight/remove/modify that address. Sorry. Use <kbd>CTRL</kbd>+<kbd>L</kbd> and start typing.
 
-## How do I modify the URLs?
+## How do I modify the options?
 
-There's no interface to modify the URLs. Open `go.js` in a text editor and change the URLs manually. Make sure URLs are always wrapped in double quotes (`""`) and all but the last URL is followed by a comma.
-
-# NOTE
-
-Yes, I'm the [New Tab Redirect](https://github.com/jimschubert/NewTab-Redirect) developer. No, I will not accept donations for this extension. Nor will I entertain offers to sell this extension or integrate your code into this extension. I am explicitly *not* publishing this to the Web Store because I don't want to be hassled by 'buyers' or 'marketers'.  My only goal is to give people a way to make their lives easier.
+There is an interface for modifying the URLs, and to randomize the order . You can also modify the defaults URLs from the js code, in that case make sure URLs are always wrapped in double quotes (`""`) and all but the last URL is followed by a comma.
 
 # License
 
